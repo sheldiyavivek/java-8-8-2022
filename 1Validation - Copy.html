@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	  <title>JQuery Form Validation</title>	
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style type="text/css">
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   background-image: url(https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);   
+
+  border: 1px solid rgb(195, 41, 41)
+
+
+
+
+
+}
+* {box-sizing: border-box;}
+
+input[type=text],input[type=email],input[type=password], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid rgb(183, 9, 9);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+}
+label {
+    width:100px;
+    display:inline-block
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #0d700f;
+  padding: 20px;
+}
+
+.error{
+	color:red;
+	width:100%;
+	margin-top:10px;
+	padding-left:105px;
+}
+      </style>
+      <script type="text/javascript">
+         jQuery('#frm').validate({
+	rules:{
+		name:"required",
+		email:{
+			required:true,
+			email:true
+		},
+		password:{
+			required:true,
+			minlength:5
+		},
+      contact No:{
+         required:true
+         minlendth:10
+	},messages:{
+		name:"Please enter your name",
+		email:{
+			required:"Please enter email",
+			email:"Please enter valid email",
+		},
+		password:{
+			required:"Please enter your password",
+			minlength:"Password must be 5 char long"
+		},
+      contact No:{
+         required:"Please enter your ocontact No",
+			minlength:"ocontact No must be 10 char long"
+
+	},
+	submitHandler:function(form){
+		form.submit();
+	}
+});
+      </script>
+   </head>
+   <body align="center">
+      <h2>jQuery Form Validation</h2>
+      <div class="container">
+         <form id="frm" method="post"> 
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            
+			<br/><br/>
+			<label for="email">Email </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+			
+			<br/><br/>
+			<label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <br/><br/>
+            <label for="contact No">Contact No</label>
+               <input type="contact No" id="contact No" name="contact No" placeholder="Enter your contact No">
+
+
+
+        
+
+
+			
+			<br/><br/>
+			<input type="submit" value="Submit">
+         </form>
+      </div>
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" ></script>
+	  <script src="script.js" ></script>
+   </body>
+</html>

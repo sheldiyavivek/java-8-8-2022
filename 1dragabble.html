@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Demo Dragabble</title>
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+     
+        <style type="text/css">
+         body{
+            background-image:url(https://www.bing.com/th?id=OIP.nfdzZrRDZqfTinzNqYVZvQHaEK&w=176&h=170&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 115%  115%;
+
+         }   
+
+            #MyDiv{
+                background-image:url(https://th.bing.com/th/id/OIP.fCSZp5lUTYxnpJyxgTAbsgHaEo?w=255&h=180&c=7&r=0&o=5&pid=1.7);
+            }
+            #MYHOMEDIV{
+                background-image:url(https://skins19.wincustomize.com/34/44/3444552/50/2129/preview-50-2129.jpg);
+            }
+            #MyHorizontalDiv{
+                background-image:url(https://th.bing.com/th/id/OIP.PImitzBXvpWJNwdb-52mvwHaHa?w=162&h=180&c=7&r=0&o=5&pid=1.7);   
+            }
+            #MyFiftyPixelDiv{
+                   background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/08/Best-3D-Images-Screen-Download.jpg);   
+
+            }
+            #MyThreeSecondsDelayDiv{
+                background-image:url(https://th.bing.com/th/id/R.525fa3f425bd7b161d5c6803c9635951?rik=in4v5QjGh8yi8w&riu=http%3a%2f%2fwww.hdwallpaperspulse.com%2fwp-content%2fuploads%2f2017%2f12%2f14%2fawesome-mountain-image.jpg&ehk=UwN%2bFIC8%2f1MzyHehXs9CFgm6ZEldikWCM4EMPUp8awY%3d&risl=&pid=ImgRaw&r=0); 
+            }
+          
+ #MyDiv,#MyHomeDiv,#MyHorizontalDiv,#MyVerticalDiv,#MyDivDisable,#MyThreeSecondsDelayDiv
+            {
+                 width:200px; 
+                 height:200px; 
+                 padding:10px; 
+                
+                 color:#fa0f0f;
+                 font-size:large;
+                 font-weight:bold
+
+                 
+            }
+            #MyFiftyPixelDiv
+            {
+                 width:800px; 
+                 height:200px; 
+                 padding:10px; 
+                
+                 color:#c8f10e;
+                 font-size:large;
+                 font-weight:bold
+                
+            }
+            #MyHomeDiv,#MyHorizontalDiv,#MyVerticalDiv,#MyFiftyPixelDiv,#MyThreeSecondsDelayDiv
+            {
+                border:solid 3px #d8800c;
+            }
+         </style>
+         <script  type="text/javascript">
+             $(document).ready(function(){
+                $("#MyDiv").draggable();
+                $("#MyHomeDiv span").draggable({
+                    containment: "#MyHomeDiv"
+                });
+                $("#MyHorizontalDiv span").draggable({
+                  axis: "x"
+              });
+
+              $("#MyVerticalDiv span").draggable({
+                  axis: "y"
+              });
+              $("#MyFiftyPixelDiv span").draggable({
+                  distance: 200
+              });
+
+              $("#MyThreeSecondsDelayDiv span").draggable({
+                  delay:3000
+              });
+
+             })
+         </script>
+         
+    </head>
+    <body>
+        <div id="MyDiv">
+            <p>Hii Friends....!!</p>
+        </div>
+        <hr/>
+        <div id="MyHomeDiv">
+            <span>This Is My Home And I Can Move Within It Only.....</span><br /><br />
+        </div>
+        <hr/>
+        <div id="MyHorizontalDiv">
+            <span>I can Move only Horizontaly....</span><br /><br />
+        </div>
+        <hr/><div id="MyThreeSecondsDelayDiv">
+            <span>I Can Move Only After 3 Seconds....</span><br /><br />
+        </div>
+        <hr/>
+        <div id="MyFiftyPixelDiv">
+            <span>I Can Move Only After 200 PX....</span><br /><br />
+        </div>
+        <hr/>
+
+    </body>
+</html>

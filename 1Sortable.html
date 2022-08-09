@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<head>  
+   <title>jQuery UI Sortable - Example</title>  
+   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+   <style>  
+      #sort-1 { list-style-type: none; margin: 0;   
+         padding: 0; width: 200px; }  
+      #sort-1 li { margin: 0 5px 5px 5px; padding: 0.4em;   
+         padding-left: 1.5em; font-size: 18px; height: 20px; }  
+      .highlight {  
+         border: 2px solid rgb(31, 188, 228);  
+         font-weight: bold;  
+         font-size: 40px;  
+         background-color: gray;  
+      }  
+      .default {  
+         background: rgb(20, 197, 220);  
+         border: 2px solid brown;  
+         color: white;  
+      }  
+   </style>  
+   <script>  
+      $(function() {  
+         $( "#sort-1" ).sortable({  
+          placeholder: "highlight"  
+         });  
+      });  
+   </script>  
+</head>  
+<body>  
+<h1>List to re-order</h1>  
+   <ul id="sort-1">  
+      <li class="default">1</li>  
+      <li class="default">2</li>  
+      <li class="default">3</li>  
+      <li class="default">4</li>  
+      <li class="default">5</li>  
+      <li class="default">6</li>  
+      <li class="default">7</li>  
+   </ul>
+   <h2>List to re-order</h2>  
+   <u2 id="sort-2">  
+      <li class="default">First</li>  
+      <li class="default">Second</li>  
+      <li class="default">Third</li>  
+      <li class="default">Fourth</li>  
+      <li class="default">Fifth</li>  
+      <li class="default">Sixth</li>  
+      <li class="default">Seventh</li>  
+   </u2>   
+</body>  
+</html>
